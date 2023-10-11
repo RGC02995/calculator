@@ -19,18 +19,20 @@ addEventListener("DOMContentLoaded", (e) => {
     
     let resultado = document.querySelector("#resultado");
     resultado.innerHTML = "";
-    signal = "";
+    let signal = "";
 
     //SOLUCION
 
     resolve.addEventListener('click', (e) => {
-        resultado.innerHTML = Number(resultado.innerHTML);
+        resultado.innerHTML = eval(resultado.innerHTML);
+        console.log(resultado.innerHTML);
     });
 
     //NUMEROS CON COMA
 
     coma.addEventListener('click', (e) => {
-        resultado.innerHTML = `${resultado.innerHTML}  , `;
+        signal = ",";
+        resultado.innerHTML = `${resultado.innerHTML},`;
     });
 
 
